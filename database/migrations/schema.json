@@ -1,0 +1,39 @@
+{
+    "description": "A representation of an event",
+    "type": "array",
+    "items": {
+        "type" : { "$ref": "#/$defs/event" }
+    },
+    "$defs": {
+        "event": {
+          "type": "object",
+          "required":  [
+            "event_date", "participation_fee", "event_name",
+            "event_id", "employee_mail", "employee_name", "participation_id"
+          ],
+          "properties": {
+                "participation_id": {
+                    "type": "number"
+                },
+                "employee_name": {
+                    "type": "string"
+                },
+                "employee_mail": {
+                    "type": "string"
+                },
+                "event_id": {
+                    "type": "number"
+                },
+                "event_name": {
+                    "type": "string"
+                },
+                "participation_fee": {
+                    "type": "number"
+                },
+                "event_date": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
